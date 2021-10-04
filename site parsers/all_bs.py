@@ -1,3 +1,5 @@
+import re
+
 from bs4 import BeautifulSoup
 
 with open("../blank/index.html", encoding='utf-8') as file:
@@ -114,3 +116,13 @@ for link in links:
     print(link_data_attr)
 '''
 
+'''
+find_a_by_text = soup.find("a", text="Clothers for adults")
+print(find_a_by_text)
+
+find_a_by_text = soup.find("a", text=re.compile("Clothers"))
+print(find_a_by_text)
+'''
+
+find_all_clothers = soup.find_all(text=re.compile("([Cc]lothers)"))
+print(find_all_clothers)
