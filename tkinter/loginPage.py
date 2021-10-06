@@ -14,12 +14,22 @@ def add_new_user():
     result = cursor.fetchone()
     
     if int(result[0]) > 0:
-        pass
+        error["text"] = "Error: Username already exists"
+    
+    else:
+        error["text"] = "Added New User"
+        cursor.execute("INSERT INTO users(username,password) VALUES(?,?)", (newUsername, newPassword))
+        db.commit()
+
 
 
 
 window = Tk()
 window.geometry("450x180")
+
+error = Message(text="", width=160)
+error.place(x=30,y=10)
+error.config(padx=0)
 
 label1 = Label(text = "Enter Username:")
 label1.place(x = 30, y = 40)
