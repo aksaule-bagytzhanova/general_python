@@ -23,7 +23,6 @@ def add_new_user():
 
 
 
-
 window = Tk()
 window.geometry("450x180")
 
