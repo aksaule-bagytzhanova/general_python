@@ -58,7 +58,7 @@ try:
         # with connection.cursor() as cursor:
         #     drop_table_query = "DROP TABLE users;"
         #     cursor.execute(drop_table_query)
-            
+
     finally:
         connection.close()
 except Exception as ex:
