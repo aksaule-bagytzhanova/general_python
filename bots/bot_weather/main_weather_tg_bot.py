@@ -15,7 +15,7 @@ async def start_command(message: types.Message):
 
 @dp.message_handler()
 async def get_weather(message: types.Message):
-    try:
+   try:
         r = requests.get(
             f"http://api.openweathermap.org/data/2.5/weather?q={message.text}&appid={open_weather_token}&units=metric"
         )
