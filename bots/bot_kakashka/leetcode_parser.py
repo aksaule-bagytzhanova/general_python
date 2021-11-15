@@ -1,4 +1,5 @@
 import json
+
 import requests
 
 
@@ -17,7 +18,7 @@ headers = {
 }
 
 
-def get_kakashka(username):
+def get_profile(username):
     data['variables']['username'] = username
 
     response = requests.post(BASE_URL, data=json.dumps(data), headers=headers)
