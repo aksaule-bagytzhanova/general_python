@@ -10,6 +10,9 @@ class JWTAuthentication(authentication.BaseAuthentication):
     def authenticate(self, request):
         request.user = None
 
+        auth_header = authentication.get_authorization_header(request).split()
+        auth_header_prefix = self.authentication_header_prefix.lower()
+
         if not auth_header:
             return None
 

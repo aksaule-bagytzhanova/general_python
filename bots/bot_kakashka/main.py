@@ -23,7 +23,7 @@ def prepare_message(profiles):
             max_point = int(profile['points'])
             max_point_user = profile['username']
         text += f"\n💜{profile['username']}💜" \
-                f"\nRanking   💲: {profile['ranking']}" \
+                f"\nRanking   🤑: {profile['ranking']}" \
                 f"\nPoints   💲: {profile['points']}" \
                 f"\nRealname   🛸: {profile['realName']}"  \
                 f"\nTotal   🌠: {profile['total']}"   \

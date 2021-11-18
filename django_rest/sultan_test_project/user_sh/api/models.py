@@ -18,7 +18,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ('usermane', )
+    REQUIRED_FIELDS = ('username', )
 
     objects = UserManager()
 
@@ -53,7 +53,7 @@ class UserManager(BaseUserManager):
             raise ValueError('Указанное имя пользователя должно быть уставлено')
 
         if not email:
-            raise ValueError('Данный фдрес электронной почты должен быть установлен')
+            raise ValueError('Данный адрес электронной почты должен быть установлен')
 
         email = self.normalize_email(email)
         user = self.model(username=username, email=email, **extra_fields)
