@@ -3,3 +3,5 @@ from .serializers import StatusListSerializer, RecordListSerializer
 
 # Create your views here.
 
+class op:
+    pass
