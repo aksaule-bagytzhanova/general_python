@@ -7,7 +7,8 @@ class RecordListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Record
-        fields = '__all__'
+        fields = ['created_at', 'phone', 'description', 'user_id']
+
 
 class StatusListSerializer(serializers.ModelSerializer):
 
