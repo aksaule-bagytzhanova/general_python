@@ -1,0 +1,17 @@
+1) Сначала вход на сервер
+$ ssh root@your_server_ip_address
+
+2) Добавление нового пользователя уже с рут правами
+$ useradd -ou 0 -g 0 aksi
+$ passwd aksi
+
+3) Дальше будут настройки
+Enter the new value, or press ENTER for the default
+    Full Name []:
+    Room Number []:
+    Work Phone []:
+    Home Phone []:
+    Other []:
+
+
+4) Все
