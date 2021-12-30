@@ -84,5 +84,22 @@ import this
 
 #def functions
 
+
 def get_speak_func(volume):
-    def whisper()
+    def whisper(text):
+        return text.lower() + '...'
+
+    def yell(text):
+        return text.upper() + '!'
+    if volume > 0.5:
+        return yell
+    else:
+        return whisper
+
+#lambda
+
+add = lambda x, y: x+y
+add(5,3)
+
+
+(lambda x,y: x+y)(5,3)
