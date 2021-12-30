@@ -1,11 +1,13 @@
 #1
 # try:
+#     print(5/2)
 #     print("Hello")
-# except:
+#
+# except ZeroDivisionError:
 #     print("Something went wrong")
+#
 # else:
 #     print("Nothing went wrong")
-#
 
 
 #2
@@ -36,7 +38,18 @@
 #     raise Exception("Sorry, no numbers below zero")
 
 #5
-x = "hello"
+# x = "hello"
+#
+# if not type(x) is int:
+#     raise TypeError("Only integers are allowed")
 
-if not type(x) is int:
-    raise TypeError("Only integers are allowed")
+a = 10
+try:
+    a = a/0
+except ZeroDivisionError:
+    print('Hello')
+else:
+    a=a+1
+    print(a)
+finally:
+    print('hello')

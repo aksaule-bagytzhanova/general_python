@@ -103,3 +103,38 @@ add(5,3)
 
 
 (lambda x,y: x+y)(5,3)
+
+
+#decorators
+
+def uppercase(func):
+    def wrapper():
+        original_result = func()
+        modified_result = original_result.upper()
+        return modified_result
+    return wrapper
+
+
+@uppercase
+def greet():
+    return 'Privet!'
+
+
+
+#---------------------------------------------
+
+
+def strong(func):
+    def wrapper():
+        return '<strong>' + func() + '</strong>'
+    return wrapper
+
+def emphasis(func):
+    def wrapper():
+        return '<em>' + func() + '</em>'
+    return wrapper
+
+@strong
+@emphasis
+def greet():
+    return "Privet!"
